@@ -4,7 +4,7 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
-    public float scorePerSecond = 50f;
+    public float scorePerSecond = 10f;
     
     private float score = 0f;
     private float displayScore = 0f;

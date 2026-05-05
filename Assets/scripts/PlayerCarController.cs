@@ -2,25 +2,38 @@ using UnityEngine;
 
 public class PlayerCarController : MonoBehaviour
 {
-    [Header("Настройки движения")]
-    public float forwardSpeed = 15f;
+    [Header("Скорость")]
+    public float startSpeed = 15f;        // начальная скорость
+    public float maxSpeed = 40f;          // максимальная скорость
+    public float speedIncrease = 0.5f;    // прирост скорости в секунду
+    
+    [Header("Управление")]
     public float steerSpeed = 3f;
     public float maxSteerAngle = 35f;
     public float roadWidth = 2.5f;
     public float tiltAngle = 15f;
     public float smoothTilt = 5f;
     
+    private float currentForwardSpeed;
     private float currentSteerAngle = 0f;
     private float currentTiltZ = 0f;
     private float fixedY;
+    private float currentYAngle = 0f;
     
     void Start()
     {
         fixedY = transform.position.y;
+        currentYAngle = transform.eulerAngles.y;
+        currentForwardSpeed = startSpeed;
     }
     
     void Update()
     {
+        // === УВЕЛИЧЕНИЕ СКОРОСТИ СО ВРЕМЕНЕМ ===
+        currentForwardSpeed += speedIncrease * Time.deltaTime;
+        currentForwardSpeed = Mathf.Min(currentForwardSpeed, maxSpeed);
+        
+        // === УПРАВЛЕНИЕ ===
         float steerInput = 0f;
         
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
@@ -31,14 +44,16 @@ public class PlayerCarController : MonoBehaviour
         float targetSteerAngle = steerInput * maxSteerAngle;
         currentSteerAngle = Mathf.Lerp(currentSteerAngle, targetSteerAngle, steerSpeed * Time.deltaTime);
         
-        transform.Rotate(0f, currentSteerAngle * Time.deltaTime, 0f);
+        currentYAngle += currentSteerAngle * Time.deltaTime;
         
-        Vector3 forwardMove = transform.forward * forwardSpeed * Time.deltaTime;
-        forwardMove.y = 0f;
-        transform.position += forwardMove;
+        // === ДВИЖЕНИЕ ===
+        Vector3 forward = new Vector3(Mathf.Sin(currentYAngle * Mathf.Deg2Rad), 0, Mathf.Cos(currentYAngle * Mathf.Deg2Rad));
+        transform.position += forward * currentForwardSpeed * Time.deltaTime;
         
+        // Фиксируем высоту
         transform.position = new Vector3(transform.position.x, fixedY, transform.position.z);
         
+        // Ограничение дорогой
         float clampedX = Mathf.Clamp(transform.position.x, -roadWidth, roadWidth);
         if (transform.position.x != clampedX)
         {
@@ -46,24 +61,16 @@ public class PlayerCarController : MonoBehaviour
             currentSteerAngle = 0f;
         }
         
+        // === НАКЛОН ===
         float targetTiltZ = -steerInput * tiltAngle;
         currentTiltZ = Mathf.Lerp(currentTiltZ, targetTiltZ, smoothTilt * Time.deltaTime);
         
-        Vector3 currentEuler = transform.rotation.eulerAngles;
-        transform.rotation = Quaternion.Euler(0f, currentEuler.y, currentTiltZ);
+        transform.rotation = Quaternion.Euler(0f, currentYAngle, currentTiltZ);
     }
     
-    void OnTriggerEnter(Collider other)
+    // Получить текущую скорость (для других скриптов)
+    public float GetCurrentSpeed()
     {
-        if (other.gameObject.name == "LeftWall" || other.gameObject.name == "RightWall")
-        {
-            GameOver();
-        }
-    }
-    
-    void GameOver()
-    {
-        Debug.Log("Игра окончена! Врезался в забор!");
-        Time.timeScale = 0f;
+        return currentForwardSpeed;
     }
 }
