@@ -3317,7 +3317,7 @@ MonoBehaviour:
   steerSpeed: 10
   maxSteerAngle: 35
   roadWidth: 100
-  tiltAngle: 1
+  tiltAngle: 3
   smoothTilt: 5
 --- !u!54 &1427653857
 Rigidbody:
