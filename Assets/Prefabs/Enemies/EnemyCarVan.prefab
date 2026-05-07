@@ -299,8 +299,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyCarMover
   speed: 15
-  detectionRange: 8
-  slowSpeed: 25
+  detectionRange: 5
+  slowSpeed: -10
 --- !u!114 &7312610817889635093
 MonoBehaviour:
   m_ObjectHideFlags: 0

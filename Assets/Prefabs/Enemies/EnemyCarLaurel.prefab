@@ -185,8 +185,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.606646, y: 0.5933905, z: 1.7108228}
-  m_Center: {x: -0.01785922, y: -0.009439319, z: 0.0026997328}
+  m_Size: {x: 4.606646, y: 0.66539764, z: 1.6665107}
+  m_Center: {x: -0.01785922, y: 0.02656424, z: 0.15779203}
 --- !u!54 &7832999440699365155
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -227,8 +227,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyCarMover
   speed: 15
-  detectionRange: 8
-  slowSpeed: 25
+  detectionRange: 5
+  slowSpeed: -10
 --- !u!114 &-8265616578769292641
 MonoBehaviour:
   m_ObjectHideFlags: 0

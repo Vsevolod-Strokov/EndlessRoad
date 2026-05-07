@@ -11,7 +11,7 @@ public class CarSpawner : MonoBehaviour
     [Header("Настройки спавна")]
     public float spawnDistance = 120f;
     public float startSpawnRate = 2f;     // начальный интервал
-    public float minSpawnRate = 0.3f;      // минимальный интервал (сложнее)
+    public float minSpawnRate = 0.3f;      // минимальный интервал
     public float spawnRateDecrease = 0.05f; // уменьшение интервала в секунду
     public float startMinSpeed = 8f;       // нач. мин. скорость врагов
     public float startMaxSpeed = 14f;      // нач. макс. скорость врагов

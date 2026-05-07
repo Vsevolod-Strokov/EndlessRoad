@@ -971,19 +971,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarSpawner
   enemyPrefabs:
-  - {fileID: 1103402844095326361, guid: 2b025856889466642b7b6f2b2d082708, type: 3}
-  - {fileID: 2007761541332143512, guid: a980804f635257445ae2d8fbe3da2924, type: 3}
   - {fileID: 1637196712285366649, guid: 05162899c6a16df4c8ab6eb75f7a11ed, type: 3}
   - {fileID: 1720230713611345758, guid: 72a99bd6fdf664c4f963524fd821761e, type: 3}
+  - {fileID: 2007761541332143512, guid: a980804f635257445ae2d8fbe3da2924, type: 3}
+  - {fileID: 1103402844095326361, guid: 2b025856889466642b7b6f2b2d082708, type: 3}
   playerCar: {fileID: 1427653855}
   spawnDistance: 170
   startSpawnRate: 3
   minSpawnRate: 0.2
   spawnRateDecrease: 0.02
   startMinSpeed: 3
-  startMaxSpeed: 30
+  startMaxSpeed: 20
   speedIncrease: 0.5
-  roadWidth: 8
+  roadWidth: 8.2
   laneCount: 5
 --- !u!4 &407645263
 Transform:
@@ -1441,7 +1441,7 @@ Transform:
   m_GameObject: {fileID: 586391297}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
