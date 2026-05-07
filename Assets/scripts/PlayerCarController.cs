@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerCarController : MonoBehaviour
 {
     [Header("Скорость")]
-    public float startSpeed = 15f;        // начальная скорость
+    public float startSpeed = 0.01f;        // начальная скорость
     public float maxSpeed = 40f;          // максимальная скорость
     public float speedIncrease = 0.5f;    // прирост скорости в секунду
     

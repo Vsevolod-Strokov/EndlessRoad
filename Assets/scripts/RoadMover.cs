@@ -11,10 +11,10 @@ public class RoadMover : MonoBehaviour
         transform.position += Vector3.back * speed * Time.deltaTime;
 
         // Если дорога уехала дальше 120м позади игрока
-        if (transform.position.z < playerCar.position.z - 120f)
+        if (transform.position.z < playerCar.position.z - 100f)
         {
             Vector3 newPos = transform.position;
-            newPos.z = nextRoad.position.z + 551.7f;
+            newPos.z = nextRoad.position.z + 300f;
             transform.position = newPos;
         }
     }
