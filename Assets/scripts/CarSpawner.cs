@@ -76,7 +76,7 @@ public class CarSpawner : MonoBehaviour
         
         Vector3 spawnPos = new Vector3(
             xPos,
-            playerCar.position.y + 0.9f,
+            playerCar.position.y,
             playerCar.position.z + spawnDistance
         );
         
