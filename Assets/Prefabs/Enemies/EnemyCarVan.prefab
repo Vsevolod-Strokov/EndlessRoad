@@ -112,6 +112,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 66d50947614f8314889e3e7331e0e25b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 384882095f55867478b59e0b13beff31, type: 2}
     - target: {fileID: -3542852092398272455, guid: 66d50947614f8314889e3e7331e0e25b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -172,6 +176,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1461304994638716399, guid: 66d50947614f8314889e3e7331e0e25b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8858dffabd6d4784a92e7443666bfe59, type: 2}
+    - target: {fileID: -678588488315902003, guid: 66d50947614f8314889e3e7331e0e25b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8858dffabd6d4784a92e7443666bfe59, type: 2}
     - target: {fileID: 919132149155446097, guid: 66d50947614f8314889e3e7331e0e25b, type: 3}
       propertyPath: m_Name
       value: EnemyCarVan
@@ -216,6 +228,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6682079707895069688, guid: 66d50947614f8314889e3e7331e0e25b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bf74b14fdc98adf49a853ea74dfca455, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

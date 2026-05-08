@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: e21c5f8057359a647b888439c3641b38, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 384882095f55867478b59e0b13beff31, type: 2}
     - target: {fileID: -2577548232221058511, guid: e21c5f8057359a647b888439c3641b38, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -88,6 +92,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.161
       objectReference: {fileID: 0}
+    - target: {fileID: -1439730007547781893, guid: e21c5f8057359a647b888439c3641b38, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8858dffabd6d4784a92e7443666bfe59, type: 2}
     - target: {fileID: 919132149155446097, guid: e21c5f8057359a647b888439c3641b38, type: 3}
       propertyPath: m_Name
       value: EnemyCarLaurel
@@ -96,6 +104,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1129496810705857465, guid: e21c5f8057359a647b888439c3641b38, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8858dffabd6d4784a92e7443666bfe59, type: 2}
     - target: {fileID: 3316992658331686828, guid: e21c5f8057359a647b888439c3641b38, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -132,6 +144,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.161
       objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: e21c5f8057359a647b888439c3641b38, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bf74b14fdc98adf49a853ea74dfca455, type: 2}
     - target: {fileID: 8670761335428686811, guid: e21c5f8057359a647b888439c3641b38, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

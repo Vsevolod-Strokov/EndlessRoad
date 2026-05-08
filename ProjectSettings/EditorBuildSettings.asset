@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Prefabs/Scenes/GetStarted_Scene.unity
-    guid: 6888813f2bd9e4521b9b1343abf0c60f
+    path: Assets/MainMenu.unity
+    guid: a11a9a4babfc5d84096a8e532ba29ae4
+  - enabled: 1
+    path: Assets/endlessroad.unity
+    guid: 914b68f6c1f6a834084b3da15729d132
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
