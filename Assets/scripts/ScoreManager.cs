@@ -15,4 +15,8 @@ public class ScoreManager : MonoBehaviour
         displayScore = Mathf.Lerp(displayScore, score, 10f * Time.deltaTime);
         scoreText.text = Mathf.FloorToInt(displayScore).ToString("N0");
     }
+    public float GetScore()
+    {
+        return score;
+    }
 }
