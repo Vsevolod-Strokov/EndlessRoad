@@ -3,6 +3,7 @@ using UnityEngine;
 public class PauseManager : MonoBehaviour
 {
     public GameObject pausePanel;
+    public GameOverManager gameOverManager;  // ссылка на GameOverManager
     
     private bool isPaused = false;
     
@@ -10,10 +11,18 @@ public class PauseManager : MonoBehaviour
     {
         if (pausePanel != null)
             pausePanel.SetActive(false);
+        
+        if (gameOverManager == null)
+            gameOverManager = FindObjectOfType<GameOverManager>();
     }
     
     void Update()
     {
+        // Не работаем если Game Over активен
+        if (gameOverManager != null && gameOverManager.gameOverPanel != null && 
+            gameOverManager.gameOverPanel.activeSelf)
+            return;
+        
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
